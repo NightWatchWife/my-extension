@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <title>設定</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gray-100 flex justify-center items-center h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg w-4/5 lg:w-2/5">
+      <h1 class="text-3xl font-bold mb-6 text-center">設定</h1>
+      <div class="mb-6">
+        <h2 class="text-2xl font-semibold mb-4">Notion設定</h2>
+        <div class="form-group mb-4">
+          <label for="apiKey" class="block text-sm font-medium text-gray-700"
+            >Notion APIキー</label
+          >
+          <input
+            type="text"
+            id="apiKey"
+            class="mt-1 p-3 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md"
+            placeholder="Notion APIキーを入力"
+          />
+        </div>
+        <div class="form-group mb-4">
+          <label
+            for="databaseId"
+            class="block text-sm font-medium text-gray-700"
+            >データベースID</label
+          >
+          <input
+            type="text"
+            id="databaseId"
+            class="mt-1 p-3 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md"
+            placeholder="データベースIDを入力"
+          />
+        </div>
+        <h2 class="text-2xl font-semibold mb-4">辞書ファイルアップロード</h2>
+        <div class="form-group mb-4">
+          <label
+            for="dictionaryFile"
+            class="block text-sm font-medium text-gray-700"
+            >辞書ファイル (TXT)</label
+          >
+          <input
+            type="file"
+            id="dictionaryFile"
+            class="mt-1 p-3 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-full file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+          />
+        </div>
+        <button
+          id="uploadButton"
+          class="w-full bg-green-500 hover:bg-green-700 text-white font-bold py-3 px-4 rounded text-lg mb-4"
+        >
+          取り込み
+        </button>
+        <div
+          id="progressContainer"
+          class="w-full bg-gray-200 rounded-full h-4 mb-4"
+        >
+          <div id="progressBar" class="bg-blue-500 h-4 rounded-full"></div>
+        </div>
+        <div
+          id="dbProgressContainer"
+          class="w-full bg-gray-200 rounded-full h-4 mb-4"
+        >
+          <div id="dbProgressBar" class="bg-green-500 h-4 rounded-full"></div>
+        </div>
+        <div id="fileNameDisplay" class="text-sm text-gray-700 mb-4"></div>
+        <button
+          id="saveButton"
+          class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded text-lg"
+        >
+          保存
+        </button>
+      </div>
+    </div>
+    <script type="module" src="options.js"></script>
+  </body>
+</html>

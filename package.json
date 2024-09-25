@@ -1,0 +1,18 @@
+{
+  "type": "module",
+  "name": "my-extension",
+  "version": "1.0.0",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "iconv-lite": "^0.6.3",
+    "idb": "^8.0.0",
+    "node-fetch": "^3.3.2"
+  }
+}

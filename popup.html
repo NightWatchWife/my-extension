@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Word Definitions</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: white;
+        padding: 10px 0;
+        border-top: 1px solid #e5e7eb;
+        display: flex;
+        justify-content: space-between;
+      }
+      .definitions-container {
+        max-height: calc(100vh - 160px);
+        overflow-y: auto;
+        padding-bottom: 60px; /* フッターの高さ */
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+      <h1 class="text-4xl font-bold mb-6 text-center">Word Definitions</h1>
+      <div id="definitions" class="definitions-container text-lg text-gray-700">
+        <p>選択された単語の意味をここに表示します。</p>
+      </div>
+    </div>
+    <div class="footer px-4">
+      <button
+        id="notionButton"
+        class="w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded text-xl"
+      >
+        Notion連携
+      </button>
+      <button
+        id="settingsButton"
+        class="w-1/2 bg-gray-500 hover:bg-gray-700 text-white font-bold py-3 px-4 rounded text-xl"
+      >
+        設定
+      </button>
+    </div>
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>
